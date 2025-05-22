@@ -1,6 +1,6 @@
 # 🏈 Player Stat Tracker
 
-A full-stack web application built with Flask (Python), HTML, CSS, and JavaScript to track football player performance in real time. Player data is stored in an SQLite database and can be viewed, added, and updated through a clean user interface.
+A full-stack web application built with Flask (Python), HTML, CSS, and JavaScript. It allows users to input football player stats—such as name, position, touchdowns, yards, and tackles—and dynamically displays them in a sortable table. The data is stored in an SQLite database, enabling real-time updates and retrieval.
 
 ---
 
@@ -22,9 +22,7 @@ A full-stack web application built with Flask (Python), HTML, CSS, and JavaScrip
 
 ## 🧠 Overview
 
-A full-stack web application built with Flask (Python), HTML, CSS, and JavaScript. It allows users to input football player stats—such as name, position, touchdowns, yards, and tackles—and dynamically displays them in a sortable table. The data is stored in an SQLite database, enabling real-time updates and retrieval.
-
-
+This project allows users to input football player stats — including name, position, touchdowns, yards, and tackles — and dynamically displays them in a sortable table. It demonstrates full-stack development with a Python Flask backend and a JavaScript-driven front end.
 
 ---
 
