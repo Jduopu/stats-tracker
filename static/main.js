@@ -24,16 +24,27 @@ async function loadPlayers() {
   const players = await res.json();
   const tbody = document.getElementById('playerTable');
   tbody.innerHTML = '';
+
   players.forEach(p => {
-    const row = `<tr>
+    const row = document.createElement('tr');
+    row.innerHTML = `
       <td>${p.name}</td>
       <td>${p.position}</td>
       <td>${p.touchdowns}</td>
       <td>${p.yards}</td>
       <td>${p.tackles}</td>
-    </tr>`;
-    tbody.innerHTML += row;
+      <td><button onclick="deletePlayer(${p.id})">Delete</button></td>
+    `;
+    tbody.appendChild(row);
   });
 }
+
+async function deletePlayer(id) {
+  const confirmed = confirm("Are you sure you want to delete this player?");
+  if (!confirmed) return;
+
+  await fetch(`/players/${id}`, {
+    method: 'DELETE'
+  });
 
 loadPlayers();
