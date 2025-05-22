@@ -48,6 +48,15 @@ def players():
         players = [dict(id=row[0], name=row[1], position=row[2], touchdowns=row[3], yards=row[4], tackles=row[5]) for row in rows]
         return jsonify(players)
 
+@app.route('/players/<int:player_id>', methods=['DELETE'])
+def delete_player(player_id):
+    connection = sqlite3.connect("database.db")
+    cursor = connection.cursor()
+    cursor.execute('DELETE FROM players WHERE id = ?', (player_id,))
+    connection.commit()
+    connection.close()
+    return jsonify({'status': 'deleted'})
+
 def main():
   init_db()
   app.run(debug = True)
