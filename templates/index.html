@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Player Stat Tracker</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <h1>Player Stat Tracker</h1>
+
+  <form id="playerForm">
+    <input type="text" id="name" placeholder="Name" required>
+    <input type="text" id="position" placeholder="Position" required>
+    <input type="number" id="touchdowns" placeholder="Touchdowns" required>
+    <input type="number" id="yards" placeholder="Yards" required>
+    <input type="number" id="tackles" placeholder="Tackles" required>
+    <button type="submit">Add Player</button>
+  </form>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Position</th>
+        <th>Touchdowns</th>
+        <th>Yards</th>
+        <th>Tackles</th>
+      </tr>
+    </thead>
+    <tbody id="playerTable"></tbody>
+  </table>
+
+  <script src="/static/main.js"></script>
+</body>
+</html>
