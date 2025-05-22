@@ -81,7 +81,7 @@ This project allows users to input football player stats — including name, pos
    ```bash
    python main.py
 5. **Put in your browser**
-6. ```bash
+   ```bash
    http://127.0.0.1:5000
 
 ---
